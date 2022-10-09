@@ -538,6 +538,7 @@ func botLogin() {
 	bot.LogLevel = -1 // to ignore dumb wsapi error
 	err = bot.Open()
 	if err != nil {
+		// error: websocket: close 4004: Authentication failed. (working with https://github.com/Seklfreak/discord-image-downloader-go :D)
 		log.Println(logPrefixDiscord, color.HiRedString("Discord login failed:\t%s", err))
 		properExit()
 	}
